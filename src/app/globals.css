@@ -1,0 +1,11 @@
+
+body{
+    margin: 0px;
+    overflow: hidden;
+   /* Hide scrollbars */
+    cursor: wait;
+    padding: 0;
+    width: 100vw;
+   
+    box-sizing: border-box;
+}
