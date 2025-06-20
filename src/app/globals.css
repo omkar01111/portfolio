@@ -1,11 +1,14 @@
-
-body{
-    margin: 0px;
-    overflow: hidden;
-   /* Hide scrollbars */
-    cursor: wait;
-    padding: 0;
-    width: 100vw;
-   
+* {
     box-sizing: border-box;
-}
+    padding: 0;
+    margin: 0;
+
+    
+  }
+  
+  body, html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent sideways scroll */
+  }

@@ -29,7 +29,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main className={styles.main}>
+    <main className={`${styles.main} main`} >
       <AnimatePresence mode='wait'>
         {isLoading && <Preloader />}
       </AnimatePresence>
