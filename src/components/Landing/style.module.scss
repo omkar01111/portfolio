@@ -11,6 +11,11 @@
     .sliderContainer{
       position: absolute;
       top: calc(100vh - 350px);
+
+      @media (max-width: 540px){
+        top: calc(100vh - 55vh);
+        
+      }
     }
     
     .slider{
@@ -25,6 +30,12 @@
       font-size: 230px;
       font-weight: 500;
       padding-right: 50px;
+
+      @media (max-width: 540px){
+        font-size: 150px;
+        padding-right: 20px;
+        
+      }
     }
     
     .slider p:nth-of-type(2){
@@ -36,17 +47,25 @@
     .description{
       position: absolute;
       top: 35%;
-      left: 65%;
+      left: 70%;
       color: white;
-      font-size: 24px;
-      font-weight: 300;
+      font-size: 2rem;
+      font-weight: 400;
+
+      @media (max-width: 540px){
+        top: 75%;
+      left: 10%;
+      font-size: 1.3rem;
+        
+      }
       p{
         margin: 0px;
         margin-bottom: 10px;
+
       }
       svg{
         transform: scale(2);
-        margin-bottom: 100px;
+        margin-bottom: 10%;
       }
     }
   }
