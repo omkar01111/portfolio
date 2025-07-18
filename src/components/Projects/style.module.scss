@@ -1,4 +1,4 @@
-.projects{
+.projects {
     display: flex;
     align-items: center;
     padding-left: 200px;
@@ -6,7 +6,9 @@
     flex-direction: column;
     margin-top: 300px;
 
-    .body{
+
+
+    .body {
         max-width: 1400px;
         width: 100%;
         display: flex;
@@ -14,9 +16,38 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 100px;
+
+        @media (max-width: 1000px) {
+            display: none;
+
+        }
     }
-    
-    .modalContainer{
+
+    .cards_container {
+        display: none;
+
+        @media (max-width:1000px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            gap: 30px;
+            padding: 4%;
+
+
+        }
+
+        @media (max-width:500px) {
+            flex-direction: column;
+            padding: 30px;
+        }
+    }
+
+
+
+
+    .modalContainer {
         height: 350px;
         width: 400px;
         position: fixed;
@@ -27,34 +58,35 @@
         overflow: hidden;
         z-index: 3;
     }
-    
-    .modalSlider{
+
+    .modalSlider {
         height: 100%;
         width: 100%;
         position: relative;
         transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
     }
-    
-    .modal{
+
+    .modal {
         height: 100%;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    
-    .modal img{
+
+    .modal img {
         height: auto;
     }
-    
-    .cursor, .cursorLabel{
+
+    .cursor,
+    .cursorLabel {
         width: 80px;
         height: 80px;
         border-radius: 50%;
         background-color: #455CE9;
         color: white;
         position: fixed;
-        z-index:3;
+        z-index: 3;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -62,11 +94,10 @@
         font-weight: 300;
         pointer-events: none;
     }
-    
-    .cursorLabel{
+
+    .cursorLabel {
         background-color: transparent;
     }
-    
-    
-}
 
+
+}
