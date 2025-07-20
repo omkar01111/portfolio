@@ -5,6 +5,13 @@
     padding-right: 200px;
     flex-direction: column;
     margin-top: 300px;
+    
+    @media (max-width: 768px) {
+       gap : 50px;
+        padding-bottom: 210px;
+        z-index: 6;
+     
+    }
 
 
 
@@ -44,7 +51,14 @@
         }
     }
 
-
+.moreWork{
+    
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
     .modalContainer {
@@ -101,3 +115,8 @@
 
 
 }
+
+main{
+    
+}
+

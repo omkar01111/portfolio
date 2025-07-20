@@ -6,12 +6,21 @@
     margin-top: 200px;
     background-color: white;
     z-index: 1;
+
+      @media (max-width: 768px) {
+            top:-60vh;
+            
+            
+        }
+   
     .slider{
         display: flex;
         position: relative;
         gap: 3vw;
         width: 120vw;
         left: -10vw;
+        
+        
         .project{
             width: 25%;
             height: 20vw;
@@ -26,12 +35,17 @@
                     object-fit: cover;
                 }
             }
+            @media (max-width: 768px) {
+            display:none;
+            
+        }
         }
     }
     .circleContainer{
         background-color: red;
         position: relative;
         margin-top: 100px;
+    
         .circle{
             height: 1550%;
             width: 120%;
@@ -41,6 +55,12 @@
             z-index: 1;
             position: absolute;
             box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+
+            @media (max-width: 768px) {
+                height: 100%;
+                width: 100%;
+                left: 0;
+            }   
         }
     }
 }

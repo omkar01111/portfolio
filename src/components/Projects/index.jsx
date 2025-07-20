@@ -141,10 +141,12 @@ export default function Home() {
       </div>
 
 
-
-      <Rounded>
+<div className={styles.moreWork}>
+<Rounded  >
         <p>More work</p>
       </Rounded>
+</div>
+      
       <>
         <motion.div
           ref={modalContainer}
