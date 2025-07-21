@@ -23,7 +23,7 @@ export default function Index() {
             <div className={styles.imageContainer}>
               <Image fill={true} alt={"image"} src={`/images/background.jpg`} />
             </div>
-            <h2>Let's work</h2>
+            <h2>Let&apos;s work</h2>
           </span>
           <h2>together</h2>
           <motion.div style={{ x }} className={styles.buttonContainer}>
