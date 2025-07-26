@@ -37,9 +37,9 @@ export default function Contact() {
   }, []);
   return (
     <main className={`${styles.main} main`}>
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       <div className={styles.body}>
         {/* header div */}
@@ -52,7 +52,7 @@ export default function Contact() {
               <h3>Project together</h3>
             </span>
           </div>
-          <div>
+          <div className={styles.image_div}>
             <div className={styles.imageContainer}>
               <Image fill={true} alt={"image"} src={`/images/background.png`} />
             </div>
@@ -103,7 +103,7 @@ export default function Contact() {
               <p>Open to Remote / Freelance Work </p>
             </div>
 
-            <div>
+            <div >
               <h3>Socials</h3>
 
               <Magnetic>
@@ -121,47 +121,44 @@ export default function Contact() {
             </div>
           </div>
         </div>
-
-        
       </div>
       {/* footer */}
-         <div className={styles.info}>
-          <div className={styles.versionInfo}>
-            <span>
-              <h3>Version</h3>
-              <p>2022 © Edition</p>
-            </span>
-            <span>
-              <h3>Designed by</h3>
-              <p>Omkar More</p>
-            </span>
-          </div>
-          <div className={styles.socialLinks}>
-            <span>
-              <h3>socials</h3>
-              <Magnetic>
-                 <p>Linkedin</p>
-              </Magnetic>
-            </span>
+      <div className={styles.info}>
+        <div className={styles.versionInfo}>
+          <span>
+            <h3>Version</h3>
+            <p>2022 © Edition</p>
+          </span>
+          <span>
+            <h3>Designed by</h3>
+            <p>Omkar More</p>
+          </span>
+        </div>
+        <div className={styles.socialLinks}>
+          <span>
+            <h3>socials</h3>
+            <Magnetic>
+              <p>Linkedin</p>
+            </Magnetic>
+          </span>
 
-            
-              <Magnetic>
-                <p>Instagram</p>
-              </Magnetic>
-              <Magnetic>
-                <p>Freelance</p>
-              </Magnetic>
-              <Magnetic>
-                <p>GitHub</p>
-              </Magnetic>
-          </div>
+          <Magnetic>
+            <p>Instagram</p>
+          </Magnetic>
+          <Magnetic>
+            <p>Freelance</p>
+          </Magnetic>
+          <Magnetic>
+            <p>GitHub</p>
+          </Magnetic>
+        </div>
 
-          {/* Mobile-only footer */}
-          <div className={styles.mobileFooter}>
-            <div className={styles.mobileSocials}>
-              <h3>SOCIALS</h3>
-              <div className={styles.socialRow}>
-                <Magnetic>
+        {/* Mobile-only footer */}
+        <div className={styles.mobileFooter}>
+          <div className={styles.mobileSocials}>
+            <h3>SOCIALS</h3>
+            <div className={styles.socialRow}>
+              <Magnetic>
                 <p>Linkedin</p>
               </Magnetic>
               <Magnetic>
@@ -173,20 +170,20 @@ export default function Contact() {
               <Magnetic>
                 <p>GitHub</p>
               </Magnetic>
-              </div>
             </div>
-            <div className={styles.mobileVersion}>
-              <div className={styles.versionCol}>
-                <h3>VERSION</h3>
-                <p>2022 © Edition</p>
-              </div>
-              <div className={styles.timeCol}>
-                <h3>Designed by</h3>
-                <p>Omkar More</p>
-              </div>
+          </div>
+          <div className={styles.mobileVersion}>
+            <div className={styles.versionCol}>
+              <h3>VERSION</h3>
+              <p>2022 © Edition</p>
+            </div>
+            <div className={styles.timeCol}>
+              <h3>Designed by</h3>
+              <p>Omkar More</p>
             </div>
           </div>
         </div>
+      </div>
     </main>
   );
 }
