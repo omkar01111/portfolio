@@ -4,6 +4,7 @@ import Rounded from "../../common/RoundedButton";
 import { useRef } from "react";
 import { useScroll, motion, useTransform, useSpring } from "framer-motion";
 import Magnetic from "../../common/Magnetic";
+import Link from "next/link";
 
 export default function Index() {
   const container = useRef(null);
@@ -28,7 +29,9 @@ export default function Index() {
           <h2>together</h2>
           <motion.div style={{ x }} className={styles.buttonContainer}>
             <Rounded backgroundColor={"#334BD3"} className={styles.button}>
-              <p>Get in touch</p>
+              <p> <Link href="/contact" className={styles.social_link}>
+              Get in touch
+              </Link> </p>
             </Rounded>
           </motion.div>
           <motion.svg
@@ -57,29 +60,63 @@ export default function Index() {
           <div className={styles.versionInfo}>
             <span>
               <h3>Version</h3>
-              <p>2022 © Edition</p>
+              <p>  <Link href="/" className={styles.social_link}>
+                2025 © Edition
+              </Link>{" "}</p>
             </span>
             <span>
               <h3>Designed by</h3>
-              <p>Omkar More</p>
+              <p> {" "}
+              <Link href="/" className={styles.social_link}>
+                Omkar More
+              </Link>{" "}</p>
             </span>
           </div>
           <div className={styles.socialLinks}>
             <span>
               <h3>socials</h3>
               <Magnetic>
-                <p>Awwwards</p>
+                <p><a
+                  className={styles.social_link}
+                  href="https://www.linkedin.com/in/-omkar-more/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Linkedin
+                </a></p>
               </Magnetic>
             </span>
 
             <Magnetic>
-              <p>Instagram</p>
+              <p> <a
+                className={styles.social_link}
+                href="https://www.instagram.com/omkar_more07?"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a></p>
             </Magnetic>
             <Magnetic>
-              <p>Dribbble</p>
+              <p><a
+                className={styles.social_link}
+                href="https://www.freelancer.com/u/omkarmore07?sb=t"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Freelance
+              </a>{" "}</p>
             </Magnetic>
             <Magnetic>
-              <p>Linkedin</p>
+              <p>{" "}
+              <a
+                className={styles.social_link}
+                href="https://github.com/omkar01111"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>{" "}</p>
             </Magnetic>
           </div>
 
@@ -89,16 +126,45 @@ export default function Index() {
               <h3>SOCIALS</h3>
               <div className={styles.socialRow}>
                 <Magnetic>
-                  <p>Awwwards</p>
+                  <p><a
+                  className={styles.social_link}
+                  href="https://www.linkedin.com/in/-omkar-more/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Linkedin
+                </a></p>
                 </Magnetic>
                 <Magnetic>
-                  <p>Instagram</p>
+                  <p>  <a
+                className={styles.social_link}
+                href="https://www.instagram.com/omkar_more07?"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a></p>
                 </Magnetic>
                 <Magnetic>
-                  <p>Twitter</p>
+                  <p><a
+                className={styles.social_link}
+                href="https://www.freelancer.com/u/omkarmore07?sb=t"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Freelance
+              </a>{" "}</p>
                 </Magnetic>
                 <Magnetic>
-                  <p>Linkedin</p>
+                  <p>{" "}
+              <a
+                className={styles.social_link}
+                href="https://github.com/omkar01111"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>{" "}</p>
                 </Magnetic>
               </div>
             </div>
@@ -108,8 +174,13 @@ export default function Index() {
                 <p>2022 © Edition</p>
               </div>
               <div className={styles.timeCol}>
-                <h3>Designed by</h3>
-                <p>Omkar More</p>
+                <h3><Link href="/" className={styles.social_link}>
+                2025 © Edition
+              </Link>{" "}</h3>
+                <p>{" "}
+              <Link href="/" className={styles.social_link}>
+                Omkar More
+              </Link>{" "}</p>
               </div>
             </div>
           </div>
