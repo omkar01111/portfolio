@@ -3,7 +3,6 @@ import styles from "./page.module.scss";
 import { useEffect, useRef, useState } from "react";
 import {
   AnimatePresence,
-  color,
   motion,
   useScroll,
   useTransform,
@@ -26,9 +25,6 @@ export default function Contact() {
 
   useEffect(() => {
     (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-
       setTimeout(() => {
         setIsLoading(false);
         document.body.style.cursor = "default";
@@ -38,9 +34,9 @@ export default function Contact() {
   }, []);
   return (
     <main className={`${styles.main} main`}>
-      {/* <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
-      </AnimatePresence> */}
+      </AnimatePresence>
 
       <div className={styles.body}>
         {/* header div */}
@@ -309,7 +305,6 @@ export default function Contact() {
                 <Link href="/" className={styles.social_link}>
                   Omkar More
                 </Link>{" "}
-              
               </p>
             </div>
           </div>

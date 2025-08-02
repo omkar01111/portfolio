@@ -18,10 +18,18 @@ export default function Index() {
   const button = useRef(null);
   const menuButton = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
-
+  const [header_color, setHeader_color] = useState("white"); // Set default value
+  
   useEffect(() => {
     if (isActive) setIsActive(false);
-  }, [pathname]);
+  
+    // Fix: Remove setHeader_color from dependency array
+    if (pathname === "/" || pathname === "/contact") {
+      setHeader_color("white");
+    } else {
+      setHeader_color("#1c1d20");
+    }
+  }, [pathname]); // Only depend on pathname
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -73,9 +81,8 @@ export default function Index() {
 
   return (
     <>
-      <div ref={header} className={styles.header}>
+      <div ref={header} className={styles.header} style={{ color: header_color }}>
         {/* Left side logo - Always visible */}
-
         <Link href="/" legacyBehavior>
           <a className={styles.logo}>
             <p className={styles.copyright}>©</p>
@@ -88,27 +95,6 @@ export default function Index() {
         </Link>
 
         {/* Desktop Navigation - Hidden on mobile (≤540px) */}
-        {/* <div className={styles.desktopNav}>
-          <Magnetic>
-            <div className={styles.el}>
-              <a href="/work">Work</a>
-              <div className={styles.indicator}></div>
-            </div>
-          </Magnetic>
-          <Magnetic>
-            <div className={styles.el}>
-              <a href="about">About</a>
-              <div className={styles.indicator}></div>
-            </div>
-          </Magnetic>
-          <Magnetic>
-            <div className={styles.el}>
-              <a href="contact">Contact</a>
-              <div className={styles.indicator}></div>
-            </div>
-          </Magnetic>
-        </div> */}
-
         <div className={styles.desktopNav}>
           {[
             { label: "Work", href: "/work" },
@@ -123,7 +109,7 @@ export default function Index() {
                   className={`${styles.el} ${isActive ? styles.active : ""}`}
                 >
                   <Link href={item.href}>{item.label}</Link>
-                  <div className={styles.indicator}></div>
+                  <div className={styles.indicator} style={{backgroundColor:header_color}}></div>
                 </div>
               </Magnetic>
             );
